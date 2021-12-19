@@ -69,7 +69,7 @@ namespace GameSupPr.BackEnd.SQLView {
                         "INSERT INTO USER_TB (USER_ID, PWD, USER_NM)" +
                         "values ('#user_id#,#pwd#,#user_nm#");
                     signUpsql.AddParam("user_id", id);
-                    signUpsql.AddParam("pwd", pwd);
+                    signUpsql.AddParam("pwd", SHA256Hash(pwd));
                     signUpsql.AddParam("user_nm", name);
 
 
