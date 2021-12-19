@@ -8,10 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GameSupPr {
-    public partial class Form1 : Form {
-        public Form1() {
-            BackEnd.Boot.Do();
+namespace GameSupPr.FrontEnd
+{
+    public partial class SignOn : Form
+    {
+        public SignOn()
+        {
             InitializeComponent();
         }
     }
