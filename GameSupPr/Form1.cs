@@ -11,6 +11,7 @@ using System.Windows.Forms;
 namespace GameSupPr {
     public partial class Form1 : Form {
         public Form1() {
+            BackEnd.Boot.Do();
             InitializeComponent();
         }
     }

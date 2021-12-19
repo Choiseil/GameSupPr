@@ -35,8 +35,8 @@ namespace GameSupPr.BackEnd {
             jArray = new JArray();
             isDoneQuery = false;
         }
-        public void setQuery() {
-
+        public void setQuery(string data) {
+            query = data;
         }
         public void AddParam(string key, string value) {
             param.Add(key, value);
@@ -55,6 +55,7 @@ namespace GameSupPr.BackEnd {
             return Properties.Resources.DB;
         }
         public DataTable Go() {
+            ReplaceParam();
             using (MySqlConnection con = new MySqlConnection(CallDB())) {
                 try {
                     ds = new DataTable();
